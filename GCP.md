@@ -116,6 +116,7 @@ kubectl create secret generic db-credentials \
 ```
 
 ## Despliegue de la Aplicación
+- Asegurarse de colocar el endpoint del RDS que se creo en el configmap.yaml antes de correr lo siguiente.
 ```bash
 # Aplicar configuraciones
 kubectl apply -f configmap.yaml

@@ -26,6 +26,7 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
    - **Template**: Free tier
    - **DB instance identifier**: `database-1`
    - **Master username**: `postgres`
+   - **Credentials management**: Self managed
    - **Master password**: `cloud2024ufm`
    - **Confirm password**: `cloud2024ufm`
    - **DB instance class**: `db.t3.micro` (free tier)

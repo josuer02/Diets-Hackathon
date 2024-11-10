@@ -22,8 +22,9 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
    ```
 2. **Abrir una terminal en la Carpeta del Proyecto**
    Navega hasta la carpeta del repositorio clonado y abre una terminal en esa ubicación:
+    ```bash
    cd Diets-Hackathon
-   
+    ```
 ## Configuración de RDS
 
 ### 1. Crear una instancia RDS

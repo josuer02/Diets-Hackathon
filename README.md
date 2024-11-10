@@ -30,6 +30,7 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
    - **Master password**: `cloud2024ufm`
    - **Confirm password**: `cloud2024ufm`
    - **DB instance class**: `db.t3.micro` (free tier)
+   - **Storage type**: Dejar la opcion predeterminada de General Purpose SSD(gp3)
    - **Storage**: 20 GB (mínimo)
    - **Storage autoscaling**: Disabled
    - **Availability & durability**: Single DB instance

@@ -19,6 +19,8 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
 2. Ve al servicio **RDS**.
 3. Haz clic en **Create database**.
 4. Selecciona las siguientes opciones:
+   
+   - **Database creation method**: Standard create
    - **Engine type**: PostgreSQL
    - **Version**: PostgreSQL 13.11-R2
    - **Template**: Free tier

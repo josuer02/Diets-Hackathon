@@ -168,6 +168,12 @@ gcloud config get-value project
 
 
 ## Configuración del Cluster
+1. Buscar en la barra de busqueda:`Kubernetes Engine`
+2. Hacer click en: `Kubernetes Engine API`
+3. Haz click en “Enable” para habilitar la API de Kubernetes Engine
+4. Esperar unos minutos para que el cambio se propague en el sistema de Google Cloud.
+
+   
 Crear cluster de Kubernetes
 ```bash
 gcloud container clusters create mi-cluster \

@@ -190,7 +190,8 @@ kubectl create secret generic db-credentials \
 ```
 
 ## Despliegue de la Aplicación
-- Asegurarse de colocar el endpoint del RDS que se creo en el configmap.yaml antes de correr lo siguiente.
+- Asegurarse de colocar el endpoint del RDS que se creo en el DB_Host en configmap.yaml antes de correr lo siguiente.
+- El endpoint lo puedes encontar en AWS en la parte de RDS en tus database, haz click en el nombre que le hayas colocado y en connectividad y seguridad te dara el endpoint.
 
 Asegurar estar en la carpeta correcta:
 ```bash

@@ -107,9 +107,6 @@ gcloud components install kubectl
 
 # Iniciar sesión en Google Cloud
 gcloud auth login
-
-# Configurar proyecto
-gcloud config set project [ID-PROYECTO]
 ```
 
 ## Configuración del Proyecto

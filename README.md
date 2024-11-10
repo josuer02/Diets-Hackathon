@@ -168,7 +168,7 @@ gcloud config get-value project
 
 
 ## Configuración del Cluster
-1. Buscar en la barra de busqueda:`Kubernetes Engine`
+1. Buscar en la barra de busqueda de la consola en tu proyecto de GCP:`Kubernetes Engine`
 2. Hacer click en: `Kubernetes Engine API`
 3. Haz click en “Enable” para habilitar la API de Kubernetes Engine
 4. Esperar unos minutos para que el cambio se propague en el sistema de Google Cloud.
@@ -191,7 +191,12 @@ kubectl create secret generic db-credentials \
 
 ## Despliegue de la Aplicación
 - Asegurarse de colocar el endpoint del RDS que se creo en el configmap.yaml antes de correr lo siguiente.
-Aplicar configuraciones:
+
+Asegurar estar en la carpeta correcta:
+```bash
+cd k8s
+```
+Luego aplicar configuraciones:
 ```bash
 kubectl apply -f configmap.yaml
 kubectl apply -f deployment.yaml
@@ -260,11 +265,16 @@ kubectl get all
 1. Tras clonar el repositorio, en la carpeta `frontend` busca lo siguiente:
 
 - app/page.tsx
-- modifica la linea de `API_URL` e ingresa tu direccion de GCP
+- modifica la linea de `API_URL` e ingresa tu direccion de GCP la cual la encuentras en cargas de trabajo/ LoadBalancer, luego haz click en el nombre, en la parte de **Servicios expuestos** encontraras la direccion.
+- Copiar la dirrecion sin incluir el :80.
 
 2. En tu proyecto local (dentro de la carpeta `frontend`), ejecuta:
    ```bash
    npm run build
+   ```
+   Asegurate de tener react descargado, si no lo tienes utiliza:
+   ```bash
+   npm install next react react-dom
    ```
 
 ### 2. Crear y configurar el bucket S3

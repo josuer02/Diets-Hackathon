@@ -5,12 +5,25 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
 
 ## Índice
 
-1. [Configuración de RDS](#configuración-de-rds)
-2. [Kubernetes en GCP](#kubernetes-en-gcp)
-3. [Despliegue del Frontend en S3](#despliegue-del-frontend-en-s3)
+1. [Instrucciones de Configuración](#instrucciones-de-configuración)
+2. [Configuración de RDS](#configuración-de-rds)
+3. [Kubernetes en GCP](#kubernetes-en-gcp)
+4. [Despliegue del Frontend en S3](#despliegue-del-frontend-en-s3)
 
 ---
 
+## Instrucciones de Configuración
+
+1. **Clonar el Repositorio**
+   Comienza clonando este repositorio en tu máquina local:
+
+   ```bash
+   git clone https://github.com/josuer02/Diets-Hackathon.git
+   ```
+2. **Abrir una terminal en la Carpeta del Proyecto**
+   Navega hasta la carpeta del repositorio clonado y abre una terminal en esa ubicación:
+   cd <Diets-Hackathon>
+   
 ## Configuración de RDS
 
 ### 1. Crear una instancia RDS

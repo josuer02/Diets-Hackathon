@@ -100,7 +100,6 @@ docker --version
 ```
 Si aún no, instalarlo con Homebrew
 ```bash
-# Instalar con Homebrew
 brew install google-cloud-sdk
 brew install --cask docker
 ```
@@ -115,11 +114,13 @@ brew install --cask docker
 ```
 
 ## Instalación Inicial
-```bash
 # Instalar kubectl a través de gcloud
+```bash
 gcloud components install kubectl
+```
 
 # Iniciar sesión en Google Cloud
+```bash
 gcloud auth login
 ```
 
@@ -147,16 +148,15 @@ gcloud auth login
 
 ### 4. Configurar el Proyecto Activo
 ```bash
-# Formato del comando
 gcloud config set project [ID-PROYECTO]
-
+```
+```bash
 # Ejemplo
 gcloud config set project mi-proyecto-12345
 ```
 
 ### 5. Verificar la Configuración
 ```bash
-# Verificar el proyecto actual
 gcloud config get-value project
 ```
 
@@ -168,14 +168,16 @@ gcloud config get-value project
 
 
 ## Configuración del Cluster
+Crear cluster de Kubernetes
 ```bash
-# Crear cluster de Kubernetes
 gcloud container clusters create mi-cluster \
     --zone us-central1-a \
     --num-nodes 2 \
     --machine-type e2-medium
+```
 
 # Configurar credenciales de la base de datos
+```bash
 kubectl create secret generic db-credentials \
     --from-literal=DB_USER=postgres \
     --from-literal=DB_PASSWORD=cloud2024ufm
@@ -183,30 +185,32 @@ kubectl create secret generic db-credentials \
 
 ## Despliegue de la Aplicación
 - Asegurarse de colocar el endpoint del RDS que se creo en el configmap.yaml antes de correr lo siguiente.
+Aplicar configuraciones:
 ```bash
-# Aplicar configuraciones
 kubectl apply -f configmap.yaml
 kubectl apply -f deployment.yaml
 kubectl apply -f service.yaml
 ```
 
 ## Verificación
+Verificar pods
 ```bash
-# Verificar pods
 kubectl get pods
-
-# Verificar servicio y obtener IP externa
+```
+Verificar servicio y obtener IP externa
+```bash
 kubectl get services backend-service
-
-# Verificar logs
+```
+Verificar logs
+```bash
 kubectl logs -l app=backend
 ```
 
 ## Solución de Problemas
 
 ### Pods no inician
+Ver detalles del pod
 ```bash
-# Ver detalles del pod
 kubectl describe pod [nombre-del-pod]
 ```
 

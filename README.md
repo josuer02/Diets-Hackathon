@@ -33,7 +33,6 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
    - **Storage type**: Dejar la opcion predeterminada de General Purpose SSD(gp3)
    - **Storage**: 20 GB (mínimo)
    - **Storage autoscaling**: Disabled
-   - **Availability & durability**: Single DB instance
    - **VPC**: Default VPC
    - **Public access**: Yes
    - **VPC security group**: Create new
@@ -80,6 +79,12 @@ Instala el siguiente software:
 ```
 
 #### MacOS
+Revisa si ya lo tiene instalado:
+```bash
+brew list | grep google-cloud-sdk
+docker --version
+```
+Si aún no, instalarlo con Homebrew
 ```bash
 # Instalar con Homebrew
 brew install google-cloud-sdk

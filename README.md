@@ -323,7 +323,7 @@ Busca:
 ```bash
 kubectl get services backend-service
 ```
-- Copiar la IP externa.
+- Copiar la EXTERNAL-IP.
 - Copiar la dirección sin incluir el :80.
 - Ejemplo:
 - ```code

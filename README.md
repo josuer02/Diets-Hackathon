@@ -56,7 +56,7 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
 ### 2. Configurar el Grupo de Seguridad
 
 1. Ve a **EC2 > Security Groups**.
-2. Encuentra el grupo de seguridad creado para RDS.
+2. Encuentra el grupo de seguridad creado para RDS `diet-db-sg`.
 3. Edita las reglas de entrada:
    - **Type**: PostgreSQL
    - **Port**: 5432

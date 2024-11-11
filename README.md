@@ -236,9 +236,9 @@ kubectl create secret generic db-credentials \
 ```
 
 ## Despliegue de la Aplicación
-> [!IMPORTANT]
+> [!WARNING]
 > Asegurarse de colocar el endpoint del RDS que se creo en **DB_HOST** en `configmap.yaml` antes de correr lo siguiente.
-- El endpoint lo puedes encontar en AWS en la parte de RDS en tus database, haz click en el nombre que le hayas colocado y en connectividad y seguridad te dara el endpoint.
+> El endpoint lo puedes encontar en AWS en la parte de RDS en tus database, haz click en el nombre que le hayas colocado y en connectividad y seguridad te dara el endpoint.
 
 Asegurar estar en la carpeta correcta:
 ```bash
@@ -310,12 +310,23 @@ kubectl get all
 
 ### 1. Preparar el código para producción
 
-1. Tras clonar el repositorio, en la carpeta `frontend` busca lo siguiente:
-
+1. Estando en la ruta del proyecto `Diets-Hackathon` ve a la carpeta `frontend`:
+```bash
+cd frontend
+```
+Busca:
 - app/page.tsx
-- modifica la linea de `API_URL` e ingresa tu direccion de GCP la cual la encuentras en cargas de trabajo/ LoadBalancer, luego haz click en el nombre, en la parte de **Servicios expuestos** encontraras la direccion.
-- Copiar la dirrecion sin incluir el :80.
-
+- modifica la linea de `API_URL` e ingresa tu direccion de GCP la cual la encuentras en cargas de trabajo/ LoadBalancer, luego haz click en el nombre, en la parte de **Servicios expuestos** encontraras la direccion. Tambien la puedes encontrar corriendo:
+```bash
+kubectl get services backend-service
+```
+- Copiar la IP externa.
+- Copiar la dirección sin incluir el :80.
+- Ejemplo:
+- ```code
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://34.70.99.133";
+  ```
+- Asegurate de guardar los cambios al archivo.
 2. En tu proyecto local (dentro de la carpeta `frontend`), ejecuta:
    ```bash
    npm run build
@@ -388,7 +399,7 @@ kubectl get all
 
 1. Ve a la pestaña **Objects**.
 2. Haz clic en **Upload**.
-3. Arrastra todos los archivos y carpetas de tu directorio `out`.
+3. Arrastra todos los archivos y carpetas de tu directorio `out` el cual esta dentro de la carpeta `frontend`.
 4. Mantén la estructura de carpetas intacta.
 5. Haz clic en **Upload**.
 

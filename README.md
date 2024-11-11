@@ -74,7 +74,7 @@ Guarda esta información para la configuración del backend:
 
 ### 4. Crear base de datos
 
-1. Ingresa a tu instancia `database-1`
+1. Ve al servicio **RDS > Databases**. e ingresa a tu instancia `database-1`
 2. En **Connectivity & security** encontrarás el endpoint (punto de enlace), ten a la mano este endpoint.
 3. En la terminal del proyecto verifica que tengas lo siguiente:
    

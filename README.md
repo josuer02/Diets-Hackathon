@@ -60,7 +60,7 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
 3. Ingresa y edita las reglas de entrada:
    - **Type**: PostgreSQL
    - **Port**: 5432
-   - **Source**: `0.0.0.0/0` (o la IP específica de tu backend).
+   - **Source**: `0.0.0.0/0`.
 
 ### 3. Obtener información de conexión
 

@@ -89,7 +89,8 @@ psql --version
      ```
    - En Windows, puedes instalar PostgreSQL desde el sitio oficial y seleccionar la opción para instalar el cliente psql: [https://www.postgresql.org/download/]
 
-4. Conéctate a tu base de datos en Amazon RDS
+4. Conéctate a tu base de datos en Amazon RDS.
+   
 Una vez tengas `psql`, usa el siguiente comando para conectarte (utiliza tu endpoint de rds):
 
 ```bash
@@ -101,14 +102,16 @@ Cuando se te pida la contraseña, introduce:
 cloud2024ufm
 ```
 
-5. Crear la base de datos `dietplans`
+5. Crear la base de datos `dietplans`.
+   
 Una vez conectado, crea la base de datos ejecutando el siguiente comando:
 ```sql
 CREATE DATABASE dietplans;
 ```
 
-6. Verifica que la base de datos fue creada
-Para asegurarte de que dietplans ahora existe, puedes listar las bases de datos:
+6. Verifica que la base de datos fue creada.
+   
+Para asegurarte de que `dietplans` ahora existe, puedes listar las bases de datos:
 ```sql
 \l
 ```

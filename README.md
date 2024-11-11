@@ -43,7 +43,7 @@ Esta guía proporciona instrucciones detalladas para configurar y desplegar la a
    - **Credentials management**: Self managed
    - **Master password**: `cloud2024ufm`
    - **Confirm password**: `cloud2024ufm`
-   - **DB instance class**: `db.t3.micro` (free tier)
+   - **DB instance class**: `db.t4g.micro` (free tier)
    - **Storage type**: Dejar la opcion predeterminada de General Purpose SSD(gp3)
    - **Storage**: 20 GB (mínimo)
    - **Storage autoscaling**: Disabled
@@ -71,6 +71,52 @@ Guarda esta información para la configuración del backend:
 - **Nombre de usuario**: `postgres`
 - **Contraseña**: `cloud2024ufm`
 - **Nombre de la base de datos**: `database-1`
+
+### 4. Crear base de datos
+
+1. Ingresa a tu instancia `database-1`
+2. En **Connectivity & security** encontraras el endpoint (punto de enlace), ten a la mano este endpoint.
+3. En la terminal del proyecto verifica que tengas lo siguiente:
+   
+```bash
+psql --version
+```
+- Si `psql` está instalado, verás la versión.
+- Si no está instalado, verás un mensaje de error. En este caso, puedes instalarlo de la siguiente manera: 
+   - En macOS (usando Homebrew):
+     ```bash
+     brew install postgresql
+     ```
+   - En Windows, puedes instalar PostgreSQL desde el sitio oficial y seleccionar la opción para instalar el cliente psql: [https://www.postgresql.org/download/]
+
+4. Conéctate a tu base de datos en Amazon RDS
+Una vez tengas `psql`, usa el siguiente comando para conectarte (utiliza tu endpoint de rds):
+
+```bash
+psql -h **<tu-rds-endpoint>** -U postgres -p 5432 -d postgres
+```
+Cuando se te pida la contraseña, introduce:
+
+```plaintext
+cloud2024ufm
+```
+
+5. Crear la base de datos `dietplans`
+Una vez conectado, crea la base de datos ejecutando el siguiente comando:
+```sql
+CREATE DATABASE dietplans;
+```
+
+6. Verifica que la base de datos fue creada
+Para asegurarte de que dietplans ahora existe, puedes listar las bases de datos:
+```sql
+\l
+```
+Esto debería mostrar dietplans en la lista de bases de datos. Para salir escribe lo siguiente:
+```plaintext
+exit
+```
+
 
 ## Kubernetes en GCP
 

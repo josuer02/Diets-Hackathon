@@ -75,7 +75,7 @@ Guarda esta información para la configuración del backend:
 ### 4. Crear base de datos
 
 1. Ingresa a tu instancia `database-1`
-2. En **Connectivity & security** encontraras el endpoint (punto de enlace), ten a la mano este endpoint.
+2. En **Connectivity & security** encontrarás el endpoint (punto de enlace), ten a la mano este endpoint.
 3. En la terminal del proyecto verifica que tengas lo siguiente:
    
 ```bash
@@ -93,7 +93,7 @@ psql --version
 Una vez tengas `psql`, usa el siguiente comando para conectarte (utiliza tu endpoint de rds):
 
 ```bash
-psql -h **<tu-rds-endpoint>** -U postgres -p 5432 -d postgres
+psql -h tu-rds-endpoint -U postgres -p 5432 -d postgres
 ```
 Cuando se te pida la contraseña, introduce:
 
@@ -112,7 +112,7 @@ Para asegurarte de que dietplans ahora existe, puedes listar las bases de datos:
 ```sql
 \l
 ```
-Esto debería mostrar dietplans en la lista de bases de datos. Para salir escribe lo siguiente:
+Esto debería mostrar `dietplans` en la lista de bases de datos. Para salir escribe lo siguiente:
 ```plaintext
 exit
 ```
@@ -236,7 +236,7 @@ kubectl create secret generic db-credentials \
 ```
 
 ## Despliegue de la Aplicación
-- Asegurarse de colocar el endpoint del RDS que se creo en el DB_Host en configmap.yaml antes de correr lo siguiente.
+- [!IMPORTANT]Asegurarse de colocar el endpoint del RDS que se creo en **DB_HOST** en `configmap.yaml` antes de correr lo siguiente.
 - El endpoint lo puedes encontar en AWS en la parte de RDS en tus database, haz click en el nombre que le hayas colocado y en connectividad y seguridad te dara el endpoint.
 
 Asegurar estar en la carpeta correcta:
